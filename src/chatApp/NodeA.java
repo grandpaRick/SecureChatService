@@ -28,18 +28,18 @@ public class NodeA {
     //generate key pairs
 
     KeyPairGenerator keyPairGenerator;
-{
-    try {
-        keyPairGenerator = KeyPairGenerator.getInstance("RSA");
-        keyPairGenerator.initialize(2048);
-        KeyPair keyPair = keyPairGenerator.generateKeyPair();
+    {
+        try {
+            keyPairGenerator = KeyPairGenerator.getInstance("RSA");
+            keyPairGenerator.initialize(2048);
+            KeyPair keyPair = keyPairGenerator.generateKeyPair();
 
-        this.privateKey = keyPair.getPrivate();
-        this.publicKey = keyPair.getPublic();
+            this.privateKey = keyPair.getPrivate();
+            this.publicKey = keyPair.getPublic();
 
-    } catch (NoSuchAlgorithmException e) {
-        e.printStackTrace();
+        } catch (NoSuchAlgorithmException e) {
+            e.printStackTrace();
+        }
     }
-}
 
 }
